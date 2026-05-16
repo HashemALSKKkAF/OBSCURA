@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 1600"
+     width="1900" height="1600">
+  <rect x="0" y="0" width="1900" height="1600" fill="#FFFFFF"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#CC2222"/>
+    </marker>
+    <marker id="arrow-open" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <marker id="diamond-open" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#FFFFFF"
+            stroke="#333333" stroke-width="1"/>
+    </marker>
+    <marker id="erd-one" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="14" markerHeight="14" orient="auto">
+      <line x1="3" y1="0" x2="3" y2="12" stroke="#333333" stroke-width="1.4"/>
+      <line x1="7" y1="0" x2="7" y2="12" stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <marker id="erd-many" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M2,2 L11,6 L2,10 M11,6 L2,6" fill="none"
+            stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <filter id="soft" x="-5%" y="-5%" width="110%" height="115%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.2"/>
+      <feOffset dx="0" dy="1.2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .title  { font: 700 30px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; }
+    .subtitle { font: 400 14px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; }
+    .footer { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; }
+    .label  { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; text-anchor:middle; }
+    .label-sm { font: 500 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; text-anchor:middle; }
+    .label-l { font: 700 14px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; text-anchor:middle; }
+    .label-w { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #FFFFFF; text-anchor:middle; }
+    .arrow-lbl { font: 500 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .stereotype { font: 400 italic 10.5px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; text-anchor:middle; }
+    .legend-t { font: 600 12px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; }
+    .legend-b { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .erd-attr { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .erd-pk   { font: 700 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #CC2222; }
+    .mono     { font: 500 11px ui-monospace, 'Consolas', 'SF Mono', monospace; fill: #333333; }
+  </style>
+
+  <!-- Header -->
+  <text x="40" y="48" class="title">Figure 4.2 — Sequence Diagram</text>
+  <text x="40" y="72" class="subtitle">End-to-end &quot;Run a New Investigation&quot; flow</text>
+  <line x1="40" y1="86" x2="1860" y2="86" stroke="#CC2222" stroke-width="1.6"/>
+  <rect x="55.0" y="130" width="190" height="58" rx="6" ry="6" fill="#FFE0B2" stroke="#EF6C00" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="150.0" y="156.0" class="label-l" text-anchor="middle">Security</text>
+  <text x="150.0" y="172.0" class="label-l" text-anchor="middle">Analyst</text>
+  <line x1="150" y1="188" x2="150" y2="1480" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="4,4"/>
+  <rect x="295.0" y="130" width="190" height="58" rx="6" ry="6" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="390.0" y="156.0" class="label-l" text-anchor="middle">Browser SPA</text>
+  <text x="390.0" y="172.0" class="label-l" text-anchor="middle">(index.html + script.js)</text>
+  <line x1="390" y1="188" x2="390" y2="1480" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="4,4"/>
+  <rect x="555.0" y="130" width="190" height="58" rx="6" ry="6" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="650.0" y="156.0" class="label-l" text-anchor="middle">Flask API</text>
+  <text x="650.0" y="172.0" class="label-l" text-anchor="middle">(app.py)</text>
+  <line x1="650" y1="188" x2="650" y2="1480" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="4,4"/>
+  <rect x="825.0" y="130" width="190" height="58" rx="6" ry="6" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="920.0" y="156.0" class="label-l" text-anchor="middle">LangChain LLM</text>
+  <text x="920.0" y="172.0" class="label-l" text-anchor="middle">(get_llm → invoke)</text>
+  <line x1="920" y1="188" x2="920" y2="1480" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="4,4"/>
+  <rect x="1095.0" y="130" width="190" height="58" rx="6" ry="6" fill="#E1BEE7" stroke="#6A1B9A" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="1190.0" y="156.0" class="label-l" text-anchor="middle">Dark-Web</text>
+  <text x="1190.0" y="172.0" class="label-l" text-anchor="middle">Search Engines</text>
+  <line x1="1190" y1="188" x2="1190" y2="1480" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="4,4"/>
+  <rect x="1355.0" y="130" width="190" height="58" rx="6" ry="6" fill="#E1BEE7" stroke="#6A1B9A" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="1450.0" y="156.0" class="label-l" text-anchor="middle">.onion Sources</text>
+  <text x="1450.0" y="172.0" class="label-l" text-anchor="middle">(via Tor SOCKS)</text>
+  <line x1="1450" y1="188" x2="1450" y2="1480" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="4,4"/>
+  <rect x="1635.0" y="130" width="190" height="58" rx="6" ry="6" fill="#FFCDD2" stroke="#C62828" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="1730.0" y="156.0" class="label-l" text-anchor="middle">SQLite DB</text>
+  <text x="1730.0" y="172.0" class="label-l" text-anchor="middle">(obscura.db)</text>
+  <line x1="1730" y1="188" x2="1730" y2="1480" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="4,4"/>
+  <line x1="150" y1="210" x2="390" y2="210" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="270.0" y="204" class="arrow-lbl" text-anchor="middle">1. types query, picks model + preset</text>
+  <line x1="390" y1="248" x2="650" y2="248" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="520.0" y="242" class="arrow-lbl" text-anchor="middle">2. POST /api/investigate (SSE)</text>
+  <rect x="643.0" y="282" width="14" height="82" fill="#FBE9E7" stroke="#CC2222" stroke-width="1"/>
+  <line x1="650" y1="286" x2="920" y2="286" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="785.0" y="280" class="arrow-lbl" text-anchor="middle">3. refine_query(query)</text>
+  <line x1="920" y1="324" x2="650" y2="324" stroke="#333333" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="785.0" y="318" class="arrow-lbl" text-anchor="middle">4. refined_query (≤5 words)</text>
+  <line x1="650" y1="362" x2="390" y2="362" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="520.0" y="356" class="arrow-lbl" text-anchor="middle">5. SSE 'Refining query…'</text>
+  <rect x="520" y="406" width="800" height="110" rx="4" ry="4" fill="none" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="6,4"/>
+  <polygon points="520,406 752,406 742,424 520,424" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.2"/>
+  <text x="526" y="419" class="legend-t" style="font-size:11px">par</text>
+  <text x="760" y="419" class="arrow-lbl">[across 16 onion search engines]</text>
+  <line x1="650" y1="428" x2="1190" y2="428" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="920.0" y="422" class="arrow-lbl" text-anchor="middle">6. GET /search?q=&lt;refined&gt;  (×16 parallel)</text>
+  <line x1="1190" y1="466" x2="650" y2="466" stroke="#333333" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="920.0" y="460" class="arrow-lbl" text-anchor="middle">7. HTML results</text>
+  <text x="670" y="508" class="arrow-lbl" text-anchor="start">dedupe + keyword pre-scoring (score_and_sort)</text>
+  <rect x="520" y="564" width="530" height="80" rx="4" ry="4" fill="none" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="6,4"/>
+  <polygon points="520,564 689,564 679,582 520,582" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.2"/>
+  <text x="526" y="577" class="legend-t" style="font-size:11px">loop</text>
+  <text x="697" y="577" class="arrow-lbl">[batches of 25 results]</text>
+  <line x1="650" y1="590" x2="920" y2="590" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="785.0" y="584" class="arrow-lbl" text-anchor="middle">8. filter_batch(query, batch)</text>
+  <line x1="920" y1="628" x2="650" y2="628" stroke="#333333" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="785.0" y="622" class="arrow-lbl" text-anchor="middle">9. selected indices (top-10/batch)</text>
+  <line x1="650" y1="686" x2="390" y2="686" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="520.0" y="680" class="arrow-lbl" text-anchor="middle">10. SSE 'Filtering N results…'</text>
+  <rect x="520" y="730" width="1060" height="110" rx="4" ry="4" fill="none" stroke="#9CA3AF" stroke-width="1.2" stroke-dasharray="6,4"/>
+  <polygon points="520,730 696,730 686,748 520,748" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.2"/>
+  <text x="526" y="743" class="legend-t" style="font-size:11px">par</text>
+  <text x="704" y="743" class="arrow-lbl">[for each top-20 source]</text>
+  <line x1="650" y1="758" x2="1450" y2="758" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="1050.0" y="752" class="arrow-lbl" text-anchor="middle">11. GET URL through Tor SOCKS5  (Tier 2 / Tier 1 selenium)</text>
+  <line x1="1450" y1="796" x2="650" y2="796" stroke="#333333" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="1050.0" y="790" class="arrow-lbl" text-anchor="middle">12. HTML content</text>
+  <text x="670" y="838" class="arrow-lbl" text-anchor="start">BeautifulSoup → strip scripts/styles → plaintext</text>
+  <line x1="650" y1="894" x2="390" y2="894" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="520.0" y="888" class="arrow-lbl" text-anchor="middle">13. SSE 'Scraping N selected sources…'</text>
+  <line x1="650" y1="932" x2="920" y2="932" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="785.0" y="926" class="arrow-lbl" text-anchor="middle">14. generate_summary(query, scraped, preset_prompt)</text>
+  <line x1="920" y1="970" x2="650" y2="970" stroke="#333333" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="785.0" y="964" class="arrow-lbl" text-anchor="middle">15. markdown report (streaming tokens)</text>
+  <line x1="650" y1="1008" x2="1730" y2="1008" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="1190.0" y="1002" class="arrow-lbl" text-anchor="middle">16. INSERT investigation + sources</text>
+  <line x1="1730" y1="1046" x2="650" y2="1046" stroke="#333333" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="1190.0" y="1040" class="arrow-lbl" text-anchor="middle">17. inv_id</text>
+  <line x1="650" y1="1084" x2="390" y2="1084" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="520.0" y="1078" class="arrow-lbl" text-anchor="middle">18. SSE done — {investigation, sources, summary}</text>
+  <line x1="390" y1="1122" x2="150" y2="1122" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="270.0" y="1116" class="arrow-lbl" text-anchor="middle">19. render markdown chat + sidebar entry</text>
+  <rect x="40" y="1400" width="320" height="106" rx="8" ry="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" filter="url(#soft)"/>
+  <text x="52" y="1422" class="legend-t">Notation</text>
+  <line x1="54" y1="1439" x2="80" y2="1439" stroke="#333333" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="90" y="1443" class="legend-b">Synchronous call / message</text>
+  <line x1="54" y1="1461" x2="80" y2="1461" stroke="#333333" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arrow-open)"/>
+  <text x="90" y="1465" class="legend-b">Return value (LangChain output / HTML)</text>
+  <rect x="54" y="1476" width="20" height="14" rx="3" ry="3" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.2"/>
+  <text x="90" y="1487" class="legend-b">Interaction frame (loop / par)</text>
+  <!-- Footer -->
+  <text x="40" y="1578" class="footer">OBSCURA — Threat Intelligence Automation from Dark Web Sources · NED University of Engineering and Technology · Group CS-22052</text>
+</svg>

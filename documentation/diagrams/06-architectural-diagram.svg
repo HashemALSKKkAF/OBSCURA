@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 1400"
+     width="1900" height="1400">
+  <rect x="0" y="0" width="1900" height="1400" fill="#FFFFFF"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#CC2222"/>
+    </marker>
+    <marker id="arrow-open" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <marker id="diamond-open" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#FFFFFF"
+            stroke="#333333" stroke-width="1"/>
+    </marker>
+    <marker id="erd-one" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="14" markerHeight="14" orient="auto">
+      <line x1="3" y1="0" x2="3" y2="12" stroke="#333333" stroke-width="1.4"/>
+      <line x1="7" y1="0" x2="7" y2="12" stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <marker id="erd-many" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M2,2 L11,6 L2,10 M11,6 L2,6" fill="none"
+            stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <filter id="soft" x="-5%" y="-5%" width="110%" height="115%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.2"/>
+      <feOffset dx="0" dy="1.2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .title  { font: 700 30px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; }
+    .subtitle { font: 400 14px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; }
+    .footer { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; }
+    .label  { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; text-anchor:middle; }
+    .label-sm { font: 500 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; text-anchor:middle; }
+    .label-l { font: 700 14px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; text-anchor:middle; }
+    .label-w { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #FFFFFF; text-anchor:middle; }
+    .arrow-lbl { font: 500 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .stereotype { font: 400 italic 10.5px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; text-anchor:middle; }
+    .legend-t { font: 600 12px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; }
+    .legend-b { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .erd-attr { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .erd-pk   { font: 700 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #CC2222; }
+    .mono     { font: 500 11px ui-monospace, 'Consolas', 'SF Mono', monospace; fill: #333333; }
+  </style>
+
+  <!-- Header -->
+  <text x="40" y="48" class="title">Figure 4.6 — Architectural Diagram</text>
+  <text x="40" y="72" class="subtitle">Layered architecture of the OBSCURA system</text>
+  <line x1="40" y1="86" x2="1860" y2="86" stroke="#CC2222" stroke-width="1.6"/>
+  <rect x="130" y="150" width="1180" height="1160" rx="18" ry="18" fill="#FFFFFF" stroke="#111111" stroke-width="1.8" filter="url(#soft)"/>
+  <text x="154" y="180" class="label-l" text-anchor="start">OBSCURA — local desktop deployment</text>
+  <text x="154" y="198" class="arrow-lbl" text-anchor="start">Docker container · Tor daemon embedded · single-analyst workstation</text>
+  <rect x="154" y="240" width="1132" height="130" rx="10" ry="10" fill="#FFE0B2" stroke="#EF6C00" stroke-width="1.4"/>
+  <text x="168" y="262" class="label-l" text-anchor="start">1. Presentation Layer</text>
+  <text x="168" y="280" class="legend-b" text-anchor="start">single-page application served by Flask</text>
+  <rect x="169.0" y="296" width="357.3333333333333" height="64" rx="8" ry="8" fill="#FFFFFF" stroke="#EF6C00" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="347.66666666666663" y="318" class="label" text-anchor="middle">Browser SPA</text>
+  <text x="179.0" y="338" class="legend-b" text-anchor="start">• index.html · script.js · styles.css</text>
+  <text x="179.0" y="352" class="legend-b" text-anchor="start">• Chat UI, light/dark theme, modals</text>
+  <rect x="541.3333333333333" y="296" width="357.3333333333333" height="64" rx="8" ry="8" fill="#FFFFFF" stroke="#EF6C00" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="719.9999999999999" y="318" class="label" text-anchor="middle">SSE Streaming Reader</text>
+  <text x="551.3333333333333" y="338" class="legend-b" text-anchor="start">• Live pipeline status events</text>
+  <text x="551.3333333333333" y="352" class="legend-b" text-anchor="start">• AbortController-based cancel</text>
+  <rect x="913.6666666666666" y="296" width="357.3333333333333" height="64" rx="8" ry="8" fill="#FFFFFF" stroke="#EF6C00" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="1092.3333333333333" y="318" class="label" text-anchor="middle">Local State + Persistence</text>
+  <text x="923.6666666666666" y="338" class="legend-b" text-anchor="start">• localStorage: theme, sidebar</text>
+  <text x="923.6666666666666" y="352" class="legend-b" text-anchor="start">• in-memory: investigations, seeds, presets</text>
+  <rect x="154" y="390" width="1132" height="110" rx="10" ry="10" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.4"/>
+  <text x="168" y="412" class="label-l" text-anchor="start">2. API Layer</text>
+  <text x="168" y="430" class="legend-b" text-anchor="start">Flask routes — REST + Server-Sent Events</text>
+  <text x="178.0" y="446" class="mono" text-anchor="start">GET /api/models, /api/providers, /api/presets</text>
+  <text x="555.3333333333333" y="446" class="mono" text-anchor="start">GET/POST/DELETE /api/investigations[…]</text>
+  <text x="932.6666666666666" y="446" class="mono" text-anchor="start">POST /api/investigate  (SSE stream)</text>
+  <text x="178.0" y="470" class="mono" text-anchor="start">GET/POST/DELETE /api/seeds[…]</text>
+  <text x="555.3333333333333" y="470" class="mono" text-anchor="start">POST /api/health/{llm,search}</text>
+  <text x="932.6666666666666" y="470" class="mono" text-anchor="start">POST /api/export/pdf</text>
+  <rect x="154" y="520" width="1132" height="200" rx="10" ry="10" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.4"/>
+  <text x="168" y="542" class="label-l" text-anchor="start">3. Service Layer</text>
+  <text x="168" y="560" class="legend-b" text-anchor="start">orchestration of every business operation</text>
+  <rect x="172.0" y="580" width="208.4" height="130" rx="8" ry="8" fill="#FFFFFF" stroke="#2E7D32" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="276.2" y="602" class="label" text-anchor="middle">Investigation Pipeline</text>
+  <text x="182.0" y="622" class="legend-b" text-anchor="start">• refine_query</text>
+  <text x="182.0" y="636" class="legend-b" text-anchor="start">• filter_results</text>
+  <text x="182.0" y="650" class="legend-b" text-anchor="start">• generate_summary</text>
+  <text x="182.0" y="664" class="legend-b" text-anchor="start">• SSE progress events</text>
+  <rect x="398.4" y="580" width="208.4" height="130" rx="8" ry="8" fill="#FFFFFF" stroke="#2E7D32" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="502.59999999999997" y="602" class="label" text-anchor="middle">Deep-Crawl Engine</text>
+  <text x="408.4" y="622" class="legend-b" text-anchor="start">• Tier 1: Selenium+Firefox</text>
+  <text x="408.4" y="636" class="legend-b" text-anchor="start">• Tier 2: requests+SOCKS5</text>
+  <text x="408.4" y="650" class="legend-b" text-anchor="start">• retry + tier fallback</text>
+  <text x="408.4" y="664" class="legend-b" text-anchor="start">• block / CAPTCHA detection</text>
+  <rect x="624.8" y="580" width="208.4" height="130" rx="8" ry="8" fill="#FFFFFF" stroke="#2E7D32" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="729.0" y="602" class="label" text-anchor="middle">Seed Manager</text>
+  <text x="634.8" y="622" class="legend-b" text-anchor="start">• add_seed → background thread</text>
+  <text x="634.8" y="636" class="legend-b" text-anchor="start">• mark_crawled / mark_loaded</text>
+  <text x="634.8" y="650" class="legend-b" text-anchor="start">• auto-crawl on add</text>
+  <rect x="851.2" y="580" width="208.4" height="130" rx="8" ry="8" fill="#FFFFFF" stroke="#2E7D32" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="955.4000000000001" y="602" class="label" text-anchor="middle">Health Service</text>
+  <text x="861.2" y="622" class="legend-b" text-anchor="start">• check_tor_proxy</text>
+  <text x="861.2" y="636" class="legend-b" text-anchor="start">• check_llm_health</text>
+  <text x="861.2" y="650" class="legend-b" text-anchor="start">• ping 16 search engines</text>
+  <rect x="1077.6" y="580" width="208.4" height="130" rx="8" ry="8" fill="#FFFFFF" stroke="#2E7D32" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="1181.8" y="602" class="label" text-anchor="middle">Export Service</text>
+  <text x="1087.6" y="622" class="legend-b" text-anchor="start">• reportlab Platypus</text>
+  <text x="1087.6" y="636" class="legend-b" text-anchor="start">• MD → PDF (tables, lists, headings)</text>
+  <rect x="154" y="740" width="1132" height="140" rx="10" ry="10" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4"/>
+  <text x="168" y="762" class="label-l" text-anchor="start">4. LLM Abstraction Layer</text>
+  <text x="168" y="780" class="legend-b" text-anchor="start">LangChain · streaming · exponential-backoff retry · provider auto-gating</text>
+  <rect x="172.0" y="800" width="173.66666666666666" height="74" rx="8" ry="8" fill="#FFFFFF" stroke="#0277BD" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="258.8333333333333" y="822" class="label" text-anchor="middle">OpenAI</text>
+  <text x="182.0" y="842" class="legend-b" text-anchor="start">• GPT-4.1, GPT-5.x</text>
+  <rect x="357.66666666666663" y="800" width="173.66666666666666" height="74" rx="8" ry="8" fill="#FFFFFF" stroke="#0277BD" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="444.49999999999994" y="822" class="label" text-anchor="middle">Anthropic</text>
+  <text x="367.66666666666663" y="842" class="legend-b" text-anchor="start">• Claude Sonnet 4.x</text>
+  <rect x="543.3333333333333" y="800" width="173.66666666666666" height="74" rx="8" ry="8" fill="#FFFFFF" stroke="#0277BD" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="630.1666666666666" y="822" class="label" text-anchor="middle">Google</text>
+  <text x="553.3333333333333" y="842" class="legend-b" text-anchor="start">• Gemini 2.5 Flash/Pro</text>
+  <rect x="729.0" y="800" width="173.66666666666666" height="74" rx="8" ry="8" fill="#FFFFFF" stroke="#0277BD" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="815.8333333333334" y="822" class="label" text-anchor="middle">OpenRouter</text>
+  <text x="739.0" y="842" class="legend-b" text-anchor="start">• Qwen, Grok, gpt-oss…</text>
+  <rect x="914.6666666666666" y="800" width="173.66666666666666" height="74" rx="8" ry="8" fill="#FFFFFF" stroke="#0277BD" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="1001.5" y="822" class="label" text-anchor="middle">Ollama</text>
+  <text x="924.6666666666666" y="842" class="legend-b" text-anchor="start">• (local discovery)</text>
+  <rect x="1100.3333333333333" y="800" width="173.66666666666666" height="74" rx="8" ry="8" fill="#FFFFFF" stroke="#0277BD" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="1187.1666666666665" y="822" class="label" text-anchor="middle">llama.cpp</text>
+  <text x="1110.3333333333333" y="842" class="legend-b" text-anchor="start">• (local discovery)</text>
+  <rect x="154" y="900" width="1132" height="120" rx="10" ry="10" fill="#FFCDD2" stroke="#C62828" stroke-width="1.4"/>
+  <text x="168" y="922" class="label-l" text-anchor="start">5. Data Layer</text>
+  <text x="168" y="940" class="legend-b" text-anchor="start">single-file SQLite + filesystem audit dump</text>
+  <rect x="169.0" y="956" width="357.3333333333333" height="56" rx="8" ry="8" fill="#FFFFFF" stroke="#C62828" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="347.66666666666663" y="978" class="label" text-anchor="middle">SQLite — obscura.db</text>
+  <text x="179.0" y="998" class="legend-b" text-anchor="start">• 4 tables: investigations · sources · seeds · custom_presets · WAL</text>
+  <rect x="541.3333333333333" y="956" width="357.3333333333333" height="56" rx="8" ry="8" fill="#FFFFFF" stroke="#C62828" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="719.9999999999999" y="978" class="label" text-anchor="middle">Filesystem Audit</text>
+  <text x="551.3333333333333" y="998" class="legend-b" text-anchor="start">• investigations/crawled/&lt;sha256&gt;/{rendered.html, tier.txt}</text>
+  <rect x="913.6666666666666" y="956" width="357.3333333333333" height="56" rx="8" ry="8" fill="#FFFFFF" stroke="#C62828" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="1092.3333333333333" y="978" class="label" text-anchor="middle">Migration Layer</text>
+  <text x="923.6666666666666" y="998" class="legend-b" text-anchor="start">• one-time JSON → SQLite import on first run</text>
+  <rect x="1340" y="180" width="230" height="240" rx="12" ry="12" fill="#FBE9E7" stroke="#CC2222" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1358" y="208" class="label-l" text-anchor="start">Infrastructure</text>
+  <text x="1358" y="238" class="legend-b" text-anchor="start">• Tor daemon (embedded)</text>
+  <text x="1358" y="260" class="legend-b" text-anchor="start">• SOCKS5 → 127.0.0.1:9150</text>
+  <text x="1358" y="282" class="legend-b" text-anchor="start">• Control → 127.0.0.1:9151</text>
+  <text x="1358" y="304" class="legend-b" text-anchor="start">• NEWNYM circuit refresh</text>
+  <text x="1358" y="326" class="legend-b" text-anchor="start">• Docker container</text>
+  <text x="1358" y="348" class="legend-b" text-anchor="start">• entrypoint.sh waits for</text>
+  <text x="1358" y="370" class="legend-b" text-anchor="start">• Bootstrapped 100%</text>
+  <text x="1340" y="450" class="label-l">External Services</text>
+  <rect x="1340" y="470" width="230" height="130" rx="10" ry="10" fill="#E1BEE7" stroke="#6A1B9A" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1455" y="500" class="label" text-anchor="middle">16 Dark-Web Search</text>
+  <text x="1455" y="518" class="label" text-anchor="middle">Engines</text>
+  <text x="1455" y="550" class="legend-b" text-anchor="middle">Ahmia, Tor66, OnionLand,</text>
+  <text x="1455" y="566" class="legend-b" text-anchor="middle">Excavator, Find Tor, … (×11)</text>
+  <rect x="1340" y="620" width="230" height="130" rx="10" ry="10" fill="#E1BEE7" stroke="#6A1B9A" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1455" y="650" class="label" text-anchor="middle">.onion Sites</text>
+  <text x="1455" y="668" class="label" text-anchor="middle">(target sources)</text>
+  <text x="1455" y="700" class="legend-b" text-anchor="middle">JS-rendered via Tier 1</text>
+  <text x="1455" y="716" class="legend-b" text-anchor="middle">plain HTML via Tier 2</text>
+  <rect x="1340" y="770" width="230" height="130" rx="10" ry="10" fill="#E1BEE7" stroke="#6A1B9A" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1455" y="800" class="label" text-anchor="middle">Cloud LLM APIs</text>
+  <text x="1455" y="850" class="legend-b" text-anchor="middle">OpenAI · Anthropic ·</text>
+  <text x="1455" y="866" class="legend-b" text-anchor="middle">Google · OpenRouter</text>
+  <rect x="1340" y="920" width="230" height="130" rx="10" ry="10" fill="#E1BEE7" stroke="#6A1B9A" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1455" y="950" class="label" text-anchor="middle">Local LLM Runtimes</text>
+  <text x="1455" y="1000" class="legend-b" text-anchor="middle">Ollama (HTTP API) /</text>
+  <text x="1455" y="1016" class="legend-b" text-anchor="middle">llama.cpp (OpenAI-compat)</text>
+  <line x1="148" y1="374" x2="148" y2="386" stroke="#CC2222" stroke-width="1.6" marker-end="url(#arrow-red)"/>
+  <line x1="148" y1="504" x2="148" y2="516" stroke="#CC2222" stroke-width="1.6" marker-end="url(#arrow-red)"/>
+  <line x1="148" y1="724" x2="148" y2="736" stroke="#CC2222" stroke-width="1.6" marker-end="url(#arrow-red)"/>
+  <line x1="148" y1="884" x2="148" y2="896" stroke="#CC2222" stroke-width="1.6" marker-end="url(#arrow-red)"/>
+  <path d="M 1310 620.0 C 1328 620.0, 1322 535, 1340 535" stroke="#333333" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
+  <text x="1325.0" y="571.5" class="arrow-lbl" text-anchor="middle">search via Tor SOCKS5</text>
+  <path d="M 1310 620.0 C 1328 620.0, 1322 685, 1340 685" stroke="#333333" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
+  <text x="1325.0" y="646.5" class="arrow-lbl" text-anchor="middle">crawl via Tor SOCKS5</text>
+  <path d="M 1310 810.0 C 1328 810.0, 1322 835, 1340 835" stroke="#333333" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
+  <text x="1325.0" y="816.5" class="arrow-lbl" text-anchor="middle">HTTPS</text>
+  <path d="M 1310 810.0 C 1328 810.0, 1322 985, 1340 985" stroke="#333333" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
+  <text x="1325.0" y="891.5" class="arrow-lbl" text-anchor="middle">HTTP localhost</text>
+  <circle cx="70" cy="310" r="14" fill="#FFFFFF" stroke="#CC2222" stroke-width="2.2"/>
+  <line x1="70" y1="324" x2="70" y2="366" stroke="#CC2222" stroke-width="2.2"/>
+  <line x1="50" y1="336" x2="90" y2="336" stroke="#CC2222" stroke-width="2.2"/>
+  <line x1="70" y1="366" x2="56" y2="390" stroke="#CC2222" stroke-width="2.2"/>
+  <line x1="70" y1="366" x2="84" y2="390" stroke="#CC2222" stroke-width="2.2"/>
+  <text x="70" y="412" class="label-sm" text-anchor="middle">Security</text>
+  <text x="70" y="426" class="label-sm" text-anchor="middle">Analyst</text>
+  <line x1="90" y1="336" x2="130" y2="336" stroke="#CC2222" stroke-width="1.8" marker-end="url(#arrow-red)"/>
+  <rect x="1340" y="1120" width="230" height="216" rx="8" ry="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" filter="url(#soft)"/>
+  <text x="1352" y="1142" class="legend-t">Layer Notation</text>
+  <rect x="1354" y="1152" width="20" height="14" rx="3" ry="3" fill="#FFE0B2" stroke="#EF6C00" stroke-width="1.2"/>
+  <text x="1390" y="1163" class="legend-b">Presentation</text>
+  <rect x="1354" y="1174" width="20" height="14" rx="3" ry="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+  <text x="1390" y="1185" class="legend-b">API / transport</text>
+  <rect x="1354" y="1196" width="20" height="14" rx="3" ry="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+  <text x="1390" y="1207" class="legend-b">Service / domain</text>
+  <rect x="1354" y="1218" width="20" height="14" rx="3" ry="3" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.2"/>
+  <text x="1390" y="1229" class="legend-b">LLM abstraction</text>
+  <rect x="1354" y="1240" width="20" height="14" rx="3" ry="3" fill="#FFCDD2" stroke="#C62828" stroke-width="1.2"/>
+  <text x="1390" y="1251" class="legend-b">Data</text>
+  <rect x="1354" y="1262" width="20" height="14" rx="3" ry="3" fill="#E1BEE7" stroke="#6A1B9A" stroke-width="1.2"/>
+  <text x="1390" y="1273" class="legend-b">External service</text>
+  <line x1="1354" y1="1291" x2="1380" y2="1291" stroke="#CC2222" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="1390" y="1295" class="legend-b">Intra-layer / synchronous</text>
+  <line x1="1354" y1="1313" x2="1380" y2="1313" stroke="#333333" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="1390" y="1317" class="legend-b">Cross-cutting / via Tor</text>
+  <!-- Footer -->
+  <text x="40" y="1378" class="footer">OBSCURA — Threat Intelligence Automation from Dark Web Sources · NED University of Engineering and Technology · Group CS-22052</text>
+</svg>

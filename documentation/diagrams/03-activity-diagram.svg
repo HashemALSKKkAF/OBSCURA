@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1900"
+     width="1700" height="1900">
+  <rect x="0" y="0" width="1700" height="1900" fill="#FFFFFF"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#CC2222"/>
+    </marker>
+    <marker id="arrow-open" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <marker id="diamond-open" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#FFFFFF"
+            stroke="#333333" stroke-width="1"/>
+    </marker>
+    <marker id="erd-one" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="14" markerHeight="14" orient="auto">
+      <line x1="3" y1="0" x2="3" y2="12" stroke="#333333" stroke-width="1.4"/>
+      <line x1="7" y1="0" x2="7" y2="12" stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <marker id="erd-many" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M2,2 L11,6 L2,10 M11,6 L2,6" fill="none"
+            stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <filter id="soft" x="-5%" y="-5%" width="110%" height="115%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.2"/>
+      <feOffset dx="0" dy="1.2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .title  { font: 700 30px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; }
+    .subtitle { font: 400 14px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; }
+    .footer { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; }
+    .label  { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; text-anchor:middle; }
+    .label-sm { font: 500 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; text-anchor:middle; }
+    .label-l { font: 700 14px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; text-anchor:middle; }
+    .label-w { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #FFFFFF; text-anchor:middle; }
+    .arrow-lbl { font: 500 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .stereotype { font: 400 italic 10.5px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; text-anchor:middle; }
+    .legend-t { font: 600 12px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; }
+    .legend-b { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .erd-attr { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .erd-pk   { font: 700 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #CC2222; }
+    .mono     { font: 500 11px ui-monospace, 'Consolas', 'SF Mono', monospace; fill: #333333; }
+  </style>
+
+  <!-- Header -->
+  <text x="40" y="48" class="title">Figure 4.3 — Activity Diagram</text>
+  <text x="40" y="72" class="subtitle">Operational workflow of an OBSCURA investigation</text>
+  <line x1="40" y1="86" x2="1660" y2="86" stroke="#CC2222" stroke-width="1.6"/>
+  <rect x="665.0" y="110.0" width="110" height="40" rx="20.0" ry="20.0" fill="#212121" stroke="#212121" stroke-width="1" filter="url(#soft)"/>
+  <text x="720" y="135" class="label-w" text-anchor="middle">Start</text>
+  <polygon points="556.0,175.0 900.0,175.0 884.0,225.0 540.0,225.0" fill="#FFE0E6" stroke="#B71C1C" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720" y="205" class="label">Analyst submits query, model &amp; preset</text>
+  <line x1="720" y1="150" x2="720" y2="175" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <polygon points="720,245.0 820.0,290 720,335.0 620.0,290" fill="#FFF59D" stroke="#F9A825" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720" y="286.5" class="label-sm" text-anchor="middle">Query</text>
+  <text x="720" y="299.5" class="label-sm" text-anchor="middle">empty?</text>
+  <line x1="720" y1="225" x2="720" y2="245.0" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="970" y="265" width="220" height="50" rx="22" ry="22" fill="#FFE0E6" stroke="#B71C1C" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1080.0" y="295.0" class="label-sm" text-anchor="middle">Show toast: "Query is required"</text>
+  <line x1="820.0" y1="290" x2="970" y2="290" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="905.0" y="294.0" class="arrow-lbl" text-anchor="start">Yes</text>
+  <rect x="1025.0" y="400.0" width="110" height="40" rx="20.0" ry="20.0" fill="#212121" stroke="#212121" stroke-width="1" filter="url(#soft)"/>
+  <text x="1080" y="425" class="label-w" text-anchor="middle">End</text>
+  <line x1="1080" y1="315" x2="1080" y2="400" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="510.0" y="400.0" width="420" height="60" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720.0" y="435.0" class="label" text-anchor="middle">LLM refines query (≤5 words, no operators)</text>
+  <line x1="720" y1="335.0" x2="720" y2="400" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="710.0" y="371.5" class="arrow-lbl" text-anchor="end">No</text>
+  <polygon points="720,500.0 820.0,540 720,580.0 620.0,540" fill="#FFF59D" stroke="#F9A825" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720" y="536.5" class="label-sm" text-anchor="middle">Refine</text>
+  <text x="720" y="549.5" class="label-sm" text-anchor="middle">succeeded?</text>
+  <line x1="720" y1="460" x2="720" y2="500" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="970" y="515" width="220" height="50" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1080.0" y="545.0" class="label-sm" text-anchor="middle">Fallback to raw query</text>
+  <line x1="820.0" y1="540" x2="970" y2="540" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="905.0" y="544.0" class="arrow-lbl" text-anchor="start">No</text>
+  <line x1="1080" y1="565" x2="1080" y2="605" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="1080" y1="605" x2="720" y2="605" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="890.0" y="609.0" class="arrow-lbl" text-anchor="end">rejoin</text>
+  <rect x="240" y="655" width="940" height="10" fill="#212121"/>
+  <text x="1188" y="664" class="arrow-lbl" text-anchor="start">fork</text>
+  <line x1="720" y1="585.0" x2="720" y2="652" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="710.0" y="622.5" class="arrow-lbl" text-anchor="end">Yes</text>
+  <rect x="290" y="680" width="190" height="50" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="385.0" y="703.5" class="label-sm" text-anchor="middle">Search Ahmia / Tor66</text>
+  <text x="385.0" y="716.5" class="label-sm" text-anchor="middle">(Tor SOCKS5)</text>
+  <rect x="620" y="680" width="200" height="50" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720.0" y="703.5" class="label-sm" text-anchor="middle">Search OnionLand /</text>
+  <text x="720.0" y="716.5" class="label-sm" text-anchor="middle">Excavator / Find Tor / …</text>
+  <rect x="980" y="680" width="190" height="50" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1075.0" y="703.5" class="label-sm" text-anchor="middle">Search remaining</text>
+  <text x="1075.0" y="716.5" class="label-sm" text-anchor="middle">11 onion engines</text>
+  <line x1="385" y1="665" x2="385" y2="680" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="720" y1="665" x2="720" y2="680" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="1075" y1="665" x2="1075" y2="680" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="240" y="755" width="940" height="10" fill="#212121"/>
+  <text x="1188" y="764" class="arrow-lbl" text-anchor="start">join</text>
+  <line x1="385" y1="705" x2="385" y2="752" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="720" y1="705" x2="720" y2="752" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="1075" y1="705" x2="1075" y2="752" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="510.0" y="790.0" width="420" height="60" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720.0" y="825.0" class="label" text-anchor="middle">Aggregate, deduplicate by URL, pre-score by keyword overlap</text>
+  <line x1="720" y1="765" x2="720" y2="790" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <polygon points="720,885.0 820.0,925 720,965.0 620.0,925" fill="#FFF59D" stroke="#F9A825" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720" y="921.5" class="label-sm" text-anchor="middle">Any</text>
+  <text x="720" y="934.5" class="label-sm" text-anchor="middle">results?</text>
+  <line x1="720" y1="850" x2="720" y2="885" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="960" y="900" width="240" height="50" rx="22" ry="22" fill="#FFE0E6" stroke="#B71C1C" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1080.0" y="930.0" class="label-sm" text-anchor="middle">Emit "no results" SSE event</text>
+  <line x1="820.0" y1="925" x2="960" y2="925" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="900.0" y="929.0" class="arrow-lbl" text-anchor="start">No</text>
+  <rect x="1025.0" y="1015.0" width="110" height="40" rx="20.0" ry="20.0" fill="#212121" stroke="#212121" stroke-width="1" filter="url(#soft)"/>
+  <text x="1080" y="1040" class="label-w" text-anchor="middle">End</text>
+  <line x1="1080" y1="950" x2="1080" y2="1015" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="490.0" y="1015.0" width="460" height="60" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720.0" y="1050.0" class="label" text-anchor="middle">LLM filter loop: batches of 25 → top-10 per batch (capped at top-20)</text>
+  <line x1="720" y1="965" x2="720" y2="1015" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="710.0" y="994.0" class="arrow-lbl" text-anchor="end">Yes</text>
+  <rect x="320" y="1155" width="800" height="10" fill="#212121"/>
+  <text x="1128" y="1164" class="arrow-lbl" text-anchor="start">fork (parallel scrape)</text>
+  <line x1="720" y1="1075" x2="720" y2="1152" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="360" y="1182" width="200" height="60" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="460.0" y="1210.0" class="label-sm" text-anchor="middle">Tier 1: Selenium +</text>
+  <text x="460.0" y="1224.0" class="label-sm" text-anchor="middle">Firefox via Tor SOCKS</text>
+  <rect x="700" y="1182" width="200" height="60" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="800.0" y="1210.0" class="label-sm" text-anchor="middle">Tier 2 fallback:</text>
+  <text x="800.0" y="1224.0" class="label-sm" text-anchor="middle">requests + SOCKS5</text>
+  <rect x="1020" y="1182" width="200" height="60" rx="22" ry="22" fill="#FFCDD2" stroke="#C62828" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1120.0" y="1210.0" class="label-sm" text-anchor="middle">Save audit dump:</text>
+  <text x="1120.0" y="1224.0" class="label-sm" text-anchor="middle">rendered.html / tier.txt</text>
+  <line x1="460" y1="1165" x2="460" y2="1182" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="800" y1="1165" x2="800" y2="1182" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="1120" y1="1165" x2="1120" y2="1182" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="320" y="1265" width="800" height="10" fill="#212121"/>
+  <text x="1128" y="1274" class="arrow-lbl" text-anchor="start">join</text>
+  <line x1="460" y1="1212" x2="460" y2="1262" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="800" y1="1212" x2="800" y2="1262" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="1120" y1="1212" x2="1120" y2="1262" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="490.0" y="1300.0" width="460" height="60" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720.0" y="1335.0" class="label" text-anchor="middle">Strip HTML → plaintext → LLM generate_summary(preset)</text>
+  <line x1="720" y1="1275" x2="720" y2="1300" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="620.0" y="1412.0" width="200" height="36" fill="#FFCDD2" stroke="#C62828" stroke-width="1.4"/>
+  <ellipse cx="720" cy="1412.0" rx="100.0" ry="12" fill="#FFCDD2" stroke="#C62828" stroke-width="1.4"/>
+  <ellipse cx="720" cy="1448.0" rx="100.0" ry="12" fill="#FFCDD2" stroke="#C62828" stroke-width="1.4"/>
+  <text x="720" y="1435" class="label">SQLite
+INSERT</text>
+  <line x1="720" y1="1360" x2="720" y2="1400" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <polygon points="556.0,1505.0 900.0,1505.0 884.0,1555.0 540.0,1555.0" fill="#FFE0E6" stroke="#B71C1C" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720" y="1535" class="label">Render markdown report in chat UI</text>
+  <line x1="720" y1="1460" x2="720" y2="1505" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <polygon points="720,1595.0 830.0,1640 720,1685.0 610.0,1640" fill="#FFF59D" stroke="#F9A825" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="720" y="1636.5" class="label-sm" text-anchor="middle">Analyst</text>
+  <text x="720" y="1649.5" class="label-sm" text-anchor="middle">action?</text>
+  <line x1="720" y1="1555" x2="720" y2="1595" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="140" y="1510" width="200" height="50" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="240.0" y="1540.0" class="label-sm" text-anchor="middle">Re-summarize</text>
+  <line x1="610" y1="1620" x2="240" y2="1535" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="415.0" y="1581.5" class="arrow-lbl" text-anchor="end">Re-sum</text>
+  <path d="M 140 1535 C 60 1535, 60 1330, 490 1330" stroke="#CC2222" stroke-width="1.5" fill="none" stroke-dasharray="6,4" marker-end="url(#arrow-red)"/>
+  <rect x="140" y="1660" width="200" height="50" rx="22" ry="22" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="240.0" y="1690.0" class="label-sm" text-anchor="middle">Trigger Deep-Crawl</text>
+  <line x1="610" y1="1660" x2="240" y2="1685" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="415.0" y="1676.5" class="arrow-lbl" text-anchor="end">Deep-crawl</text>
+  <path d="M 140 1685 C 50 1685, 50 1160, 320 1160" stroke="#CC2222" stroke-width="1.5" fill="none" stroke-dasharray="6,4" marker-end="url(#arrow-red)"/>
+  <rect x="1130" y="1510" width="220" height="50" rx="22" ry="22" fill="#FFE0E6" stroke="#B71C1C" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1240.0" y="1540.0" class="label-sm" text-anchor="middle">Export PDF / Markdown</text>
+  <line x1="830" y1="1620" x2="1240" y2="1535" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="1045.0" y="1581.5" class="arrow-lbl" text-anchor="start">Export</text>
+  <rect x="1130" y="1660" width="220" height="50" rx="22" ry="22" fill="#FFCDD2" stroke="#C62828" stroke-width="1.4" filter="url(#soft)"/>
+  <text x="1240.0" y="1690.0" class="label-sm" text-anchor="middle">Update tags / status</text>
+  <line x1="830" y1="1660" x2="1130" y2="1685" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="990.0" y="1676.5" class="arrow-lbl" text-anchor="start">Tag/Status</text>
+  <rect x="665.0" y="1800.0" width="110" height="40" rx="20.0" ry="20.0" fill="#212121" stroke="#212121" stroke-width="1" filter="url(#soft)"/>
+  <text x="720" y="1825" class="label-w" text-anchor="middle">End</text>
+  <line x1="720" y1="1685" x2="720" y2="1800" stroke="#333333" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="710.0" y="1746.5" class="arrow-lbl" text-anchor="end">Done</text>
+  <rect x="40" y="130" width="240" height="172" rx="8" ry="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" filter="url(#soft)"/>
+  <text x="52" y="152" class="legend-t">Notation</text>
+  <rect x="54" y="162" width="20" height="14" rx="3" ry="3" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.2"/>
+  <text x="90" y="173" class="legend-b">Action / activity</text>
+  <rect x="54" y="184" width="20" height="14" rx="3" ry="3" fill="#FFE0E6" stroke="#B71C1C" stroke-width="1.2"/>
+  <text x="90" y="195" class="legend-b">Input / output</text>
+  <rect x="54" y="206" width="20" height="14" rx="3" ry="3" fill="#FFCDD2" stroke="#C62828" stroke-width="1.2"/>
+  <text x="90" y="217" class="legend-b">Datastore action</text>
+  <polygon points="64,227 76,235 64,243 52,235" fill="#FFF59D" stroke="#F9A825" stroke-width="1.2"/>
+  <text x="90" y="239" class="legend-b">Decision</text>
+  <line x1="54" y1="257" x2="80" y2="257" stroke="#333333" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="90" y="261" class="legend-b">Control flow</text>
+  <line x1="54" y1="279" x2="80" y2="279" stroke="#CC2222" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arrow-open)"/>
+  <text x="90" y="283" class="legend-b">Iterative loop back</text>
+  <!-- Footer -->
+  <text x="40" y="1878" class="footer">OBSCURA — Threat Intelligence Automation from Dark Web Sources · NED University of Engineering and Technology · Group CS-22052</text>
+</svg>

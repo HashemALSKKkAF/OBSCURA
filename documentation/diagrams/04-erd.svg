@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1150"
+     width="1700" height="1150">
+  <rect x="0" y="0" width="1700" height="1150" fill="#FFFFFF"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#CC2222"/>
+    </marker>
+    <marker id="arrow-open" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <marker id="diamond-open" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#FFFFFF"
+            stroke="#333333" stroke-width="1"/>
+    </marker>
+    <marker id="erd-one" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="14" markerHeight="14" orient="auto">
+      <line x1="3" y1="0" x2="3" y2="12" stroke="#333333" stroke-width="1.4"/>
+      <line x1="7" y1="0" x2="7" y2="12" stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <marker id="erd-many" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M2,2 L11,6 L2,10 M11,6 L2,6" fill="none"
+            stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <filter id="soft" x="-5%" y="-5%" width="110%" height="115%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.2"/>
+      <feOffset dx="0" dy="1.2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .title  { font: 700 30px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; }
+    .subtitle { font: 400 14px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; }
+    .footer { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; }
+    .label  { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; text-anchor:middle; }
+    .label-sm { font: 500 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; text-anchor:middle; }
+    .label-l { font: 700 14px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; text-anchor:middle; }
+    .label-w { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #FFFFFF; text-anchor:middle; }
+    .arrow-lbl { font: 500 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .stereotype { font: 400 italic 10.5px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; text-anchor:middle; }
+    .legend-t { font: 600 12px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; }
+    .legend-b { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .erd-attr { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .erd-pk   { font: 700 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #CC2222; }
+    .mono     { font: 500 11px ui-monospace, 'Consolas', 'SF Mono', monospace; fill: #333333; }
+  </style>
+
+  <!-- Header -->
+  <text x="40" y="48" class="title">Figure 4.4 — Entity-Relationship Diagram</text>
+  <text x="40" y="72" class="subtitle">SQLite schema for OBSCURA — investigations, sources, seeds, custom presets</text>
+  <line x1="40" y1="86" x2="1660" y2="86" stroke="#CC2222" stroke-width="1.6"/>
+  <rect x="140" y="160" width="290" height="248" rx="8" ry="8" fill="#FFFFFF" stroke="#111111" stroke-width="1.6" filter="url(#soft)"/>
+  <rect x="141" y="161" width="288" height="37" fill="#FFE0B2" stroke="none" rx="6"/>
+  <text x="154" y="185" class="label-l" text-anchor="start">Investigation</text>
+  <line x1="140" y1="198" x2="430" y2="198" stroke="#111111" stroke-width="1.2"/>
+  <text x="154" y="216" class="erd-pk" text-anchor="start">PK id</text>
+  <text x="416" y="216" class="mono" text-anchor="end">INTEGER, AUTOINCREMENT</text>
+  <text x="154" y="238" class="erd-attr" text-anchor="start">timestamp</text>
+  <text x="416" y="238" class="mono" text-anchor="end">TEXT (ISO-8601)</text>
+  <text x="154" y="260" class="erd-attr" text-anchor="start">query</text>
+  <text x="416" y="260" class="mono" text-anchor="end">TEXT, NOT NULL</text>
+  <text x="154" y="282" class="erd-attr" text-anchor="start">refined_query</text>
+  <text x="416" y="282" class="mono" text-anchor="end">TEXT</text>
+  <text x="154" y="304" class="erd-attr" text-anchor="start">model</text>
+  <text x="416" y="304" class="mono" text-anchor="end">TEXT</text>
+  <text x="154" y="326" class="erd-attr" text-anchor="start">preset</text>
+  <text x="416" y="326" class="mono" text-anchor="end">TEXT  (built-in key | custom:&lt;id&gt;)</text>
+  <text x="154" y="348" class="erd-attr" text-anchor="start">summary</text>
+  <text x="416" y="348" class="mono" text-anchor="end">TEXT (markdown)</text>
+  <text x="154" y="370" class="erd-attr" text-anchor="start">status</text>
+  <text x="416" y="370" class="mono" text-anchor="end">TEXT (active|pending|closed|complete)</text>
+  <text x="154" y="392" class="erd-attr" text-anchor="start">tags</text>
+  <text x="416" y="392" class="mono" text-anchor="end">TEXT (comma-separated)</text>
+  <rect x="770" y="160" width="290" height="138" rx="8" ry="8" fill="#FFFFFF" stroke="#111111" stroke-width="1.6" filter="url(#soft)"/>
+  <rect x="771" y="161" width="288" height="37" fill="#BBDEFB" stroke="none" rx="6"/>
+  <text x="784" y="185" class="label-l" text-anchor="start">Source</text>
+  <line x1="770" y1="198" x2="1060" y2="198" stroke="#111111" stroke-width="1.2"/>
+  <text x="784" y="216" class="erd-pk" text-anchor="start">PK id</text>
+  <text x="1046" y="216" class="mono" text-anchor="end">INTEGER, AUTOINCREMENT</text>
+  <text x="784" y="238" class="erd-attr" text-anchor="start">FK investigation_id</text>
+  <text x="1046" y="238" class="mono" text-anchor="end">INTEGER  → Investigation.id</text>
+  <text x="784" y="260" class="erd-attr" text-anchor="start">title</text>
+  <text x="1046" y="260" class="mono" text-anchor="end">TEXT</text>
+  <text x="784" y="282" class="erd-attr" text-anchor="start">link</text>
+  <text x="1046" y="282" class="mono" text-anchor="end">TEXT  (.onion URL)</text>
+  <rect x="140" y="660" width="290" height="270" rx="8" ry="8" fill="#FFFFFF" stroke="#111111" stroke-width="1.6" filter="url(#soft)"/>
+  <rect x="141" y="661" width="288" height="37" fill="#C8E6C9" stroke="none" rx="6"/>
+  <text x="154" y="685" class="label-l" text-anchor="start">Seed</text>
+  <line x1="140" y1="698" x2="430" y2="698" stroke="#111111" stroke-width="1.2"/>
+  <text x="154" y="716" class="erd-pk" text-anchor="start">PK id</text>
+  <text x="416" y="716" class="mono" text-anchor="end">INTEGER, AUTOINCREMENT</text>
+  <text x="154" y="738" class="erd-attr" text-anchor="start">UK url</text>
+  <text x="416" y="738" class="mono" text-anchor="end">TEXT, UNIQUE NOT NULL</text>
+  <text x="154" y="760" class="erd-attr" text-anchor="start">hash</text>
+  <text x="416" y="760" class="mono" text-anchor="end">TEXT (SHA-256 of url)</text>
+  <text x="154" y="782" class="erd-attr" text-anchor="start">name</text>
+  <text x="416" y="782" class="mono" text-anchor="end">TEXT</text>
+  <text x="154" y="804" class="erd-attr" text-anchor="start">status_code</text>
+  <text x="416" y="804" class="mono" text-anchor="end">INTEGER  (last HTTP status)</text>
+  <text x="154" y="826" class="erd-attr" text-anchor="start">crawled</text>
+  <text x="416" y="826" class="mono" text-anchor="end">INTEGER (0/1)</text>
+  <text x="154" y="848" class="erd-attr" text-anchor="start">loaded</text>
+  <text x="416" y="848" class="mono" text-anchor="end">INTEGER (0/1)</text>
+  <text x="154" y="870" class="erd-attr" text-anchor="start">content</text>
+  <text x="416" y="870" class="mono" text-anchor="end">TEXT  (extracted plaintext)</text>
+  <text x="154" y="892" class="erd-attr" text-anchor="start">crawled_at</text>
+  <text x="416" y="892" class="mono" text-anchor="end">TEXT (ISO-8601)</text>
+  <text x="154" y="914" class="erd-attr" text-anchor="start">added_at</text>
+  <text x="416" y="914" class="mono" text-anchor="end">TEXT (ISO-8601)</text>
+  <rect x="770" y="660" width="290" height="182" rx="8" ry="8" fill="#FFFFFF" stroke="#111111" stroke-width="1.6" filter="url(#soft)"/>
+  <rect x="771" y="661" width="288" height="37" fill="#E1BEE7" stroke="none" rx="6"/>
+  <text x="784" y="685" class="label-l" text-anchor="start">CustomPreset</text>
+  <line x1="770" y1="698" x2="1060" y2="698" stroke="#111111" stroke-width="1.2"/>
+  <text x="784" y="716" class="erd-pk" text-anchor="start">PK id</text>
+  <text x="1046" y="716" class="mono" text-anchor="end">INTEGER, AUTOINCREMENT</text>
+  <text x="784" y="738" class="erd-attr" text-anchor="start">UK name</text>
+  <text x="1046" y="738" class="mono" text-anchor="end">TEXT, UNIQUE NOT NULL</text>
+  <text x="784" y="760" class="erd-attr" text-anchor="start">description</text>
+  <text x="1046" y="760" class="mono" text-anchor="end">TEXT</text>
+  <text x="784" y="782" class="erd-attr" text-anchor="start">system_prompt</text>
+  <text x="1046" y="782" class="mono" text-anchor="end">TEXT, NOT NULL</text>
+  <text x="784" y="804" class="erd-attr" text-anchor="start">created_at</text>
+  <text x="1046" y="804" class="mono" text-anchor="end">TEXT (ISO-8601)</text>
+  <text x="784" y="826" class="erd-attr" text-anchor="start">updated_at</text>
+  <text x="1046" y="826" class="mono" text-anchor="end">TEXT (ISO-8601)</text>
+  <line x1="430" y1="230" x2="770" y2="235" stroke="#333333" stroke-width="1.6" marker-end="url(#erd-many)"/>
+  <line x1="438" y1="223" x2="438" y2="237" stroke="#333333" stroke-width="1.6"/>
+  <line x1="444" y1="223" x2="444" y2="237" stroke="#333333" stroke-width="1.6"/>
+  <text x="600.0" y="220.5" class="arrow-lbl" text-anchor="middle">  has   (1 — N, ON DELETE CASCADE)</text>
+  <line x1="430" y1="350" x2="770" y2="725" stroke="#6B7280" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arrow-open)"/>
+  <text x="600.0" y="525.5" class="arrow-lbl" text-anchor="middle">soft reference (when preset starts with "custom:")</text>
+  <rect x="1180" y="160" width="380" height="210" rx="10" ry="10" fill="#FBE9E7" stroke="#CC2222" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="1196" y="186" class="legend-t" text-anchor="start">Filesystem (not in SQLite)</text>
+  <text x="1196" y="216" class="legend-b" text-anchor="start">• investigations/obscura.db  (single DB, WAL mode)</text>
+  <text x="1196" y="238" class="legend-b" text-anchor="start">• investigations/crawled/&lt;sha256&gt;/rendered.html</text>
+  <text x="1196" y="260" class="legend-b" text-anchor="start">• investigations/crawled/&lt;sha256&gt;/tier.txt</text>
+  <text x="1196" y="282" class="legend-b" text-anchor="start">  → audit dump per Deep-Crawl;</text>
+  <text x="1196" y="304" class="legend-b" text-anchor="start">    keyed by SHA-256 of source URL.</text>
+  <rect x="1180" y="470" width="380" height="128" rx="8" ry="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" filter="url(#soft)"/>
+  <text x="1192" y="492" class="legend-t">ERD Notation</text>
+  <rect x="1194" y="502" width="20" height="14" rx="3" ry="3" fill="#FBE9E7" stroke="#CC2222" stroke-width="1.2"/>
+  <text x="1230" y="513" class="legend-b">Entity (table)</text>
+  <rect x="1194" y="524" width="20" height="14" rx="3" ry="3" fill="#FFFFFF" stroke="#111111" stroke-width="1.2"/>
+  <text x="1230" y="535" class="legend-b">Attribute</text>
+  <line x1="1194" y1="553" x2="1220" y2="553" stroke="#333333" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="1230" y="557" class="legend-b">Crow's-foot relationship (1—N)</text>
+  <line x1="1194" y1="575" x2="1220" y2="575" stroke="#6B7280" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arrow-open)"/>
+  <text x="1230" y="579" class="legend-b">Soft (non-FK) reference</text>
+  <rect x="1180" y="660" width="380" height="220" rx="8" ry="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2" filter="url(#soft)"/>
+  <text x="1196" y="686" class="legend-t" text-anchor="start">Attribute Conventions</text>
+  <text x="1196" y="716" class="erd-pk" text-anchor="start">PK</text>
+  <text x="1230" y="716" class="legend-b" text-anchor="start">Primary Key  (integer surrogate)</text>
+  <text x="1196" y="736" class="legend-b" text-anchor="start">FK</text>
+  <text x="1230" y="736" class="legend-b" text-anchor="start">Foreign Key  (referential integrity)</text>
+  <text x="1196" y="756" class="legend-b" text-anchor="start">UK</text>
+  <text x="1230" y="756" class="legend-b" text-anchor="start">Unique constraint</text>
+  <text x="1196" y="776" class="legend-b" text-anchor="start">•</text>
+  <text x="1230" y="776" class="legend-b" text-anchor="start">All timestamps stored as ISO-8601 strings</text>
+  <text x="1196" y="796" class="legend-b" text-anchor="start">•</text>
+  <text x="1230" y="796" class="legend-b" text-anchor="start">All booleans stored as INTEGER 0 / 1</text>
+  <text x="1196" y="816" class="legend-b" text-anchor="start">•</text>
+  <text x="1230" y="816" class="legend-b" text-anchor="start">Indexes: idx_inv_timestamp, idx_inv_status,</text>
+  <text x="1196" y="836" class="legend-b" text-anchor="start">•</text>
+  <text x="1230" y="836" class="legend-b" text-anchor="start">         idx_seeds_crawled, idx_seeds_loaded,</text>
+  <text x="1196" y="856" class="legend-b" text-anchor="start">•</text>
+  <text x="1230" y="856" class="legend-b" text-anchor="start">         idx_custom_presets_name</text>
+  <!-- Footer -->
+  <text x="40" y="1128" class="footer">OBSCURA — Threat Intelligence Automation from Dark Web Sources · NED University of Engineering and Technology · Group CS-22052</text>
+</svg>

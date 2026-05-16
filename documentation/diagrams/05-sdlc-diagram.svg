@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 1200"
+     width="1900" height="1200">
+  <rect x="0" y="0" width="1900" height="1200" fill="#FFFFFF"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#CC2222"/>
+    </marker>
+    <marker id="arrow-open" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <marker id="diamond-open" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#FFFFFF"
+            stroke="#333333" stroke-width="1"/>
+    </marker>
+    <marker id="erd-one" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="14" markerHeight="14" orient="auto">
+      <line x1="3" y1="0" x2="3" y2="12" stroke="#333333" stroke-width="1.4"/>
+      <line x1="7" y1="0" x2="7" y2="12" stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <marker id="erd-many" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M2,2 L11,6 L2,10 M11,6 L2,6" fill="none"
+            stroke="#333333" stroke-width="1.4"/>
+    </marker>
+    <filter id="soft" x="-5%" y="-5%" width="110%" height="115%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.2"/>
+      <feOffset dx="0" dy="1.2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .title  { font: 700 30px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; }
+    .subtitle { font: 400 14px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; }
+    .footer { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; }
+    .label  { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; text-anchor:middle; }
+    .label-sm { font: 500 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; text-anchor:middle; }
+    .label-l { font: 700 14px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; text-anchor:middle; }
+    .label-w { font: 600 13px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #FFFFFF; text-anchor:middle; }
+    .arrow-lbl { font: 500 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .stereotype { font: 400 italic 10.5px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #6B7280; text-anchor:middle; }
+    .legend-t { font: 600 12px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #111111; }
+    .legend-b { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .erd-attr { font: 400 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #333333; }
+    .erd-pk   { font: 700 11px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #CC2222; }
+    .mono     { font: 500 11px ui-monospace, 'Consolas', 'SF Mono', monospace; fill: #333333; }
+  </style>
+
+  <!-- Header -->
+  <text x="40" y="48" class="title">Figure 4.5 — SDLC Diagram</text>
+  <text x="40" y="72" class="subtitle">Iterative agile SDLC adopted for OBSCURA</text>
+  <line x1="40" y1="86" x2="1860" y2="86" stroke="#CC2222" stroke-width="1.6"/>
+  <circle cx="950" cy="620" r="118" fill="#FBE9E7" stroke="#CC2222" stroke-width="1.6"/>
+  <text x="950" y="610" class="label-l">OBSCURA</text>
+  <text x="950" y="634" class="label-sm">Agile / Iterative</text>
+  <text x="950" y="654" class="label-sm">SDLC</text>
+  <rect x="810.0" y="215.0" width="280" height="130" rx="12" ry="12" fill="#FFE0B2" stroke="#EF6C00" stroke-width="1.6" filter="url(#soft)"/>
+  <text x="950.0" y="243.0" class="label-l" text-anchor="middle">1. Plan &amp; Requirements</text>
+  <text x="824.0" y="265.0" class="legend-b" text-anchor="start">• FYP brief &amp; supervisor goals</text>
+  <text x="824.0" y="281.0" class="legend-b" text-anchor="start">• Mid-eval scope &amp; literature review</text>
+  <text x="824.0" y="297.0" class="legend-b" text-anchor="start">• Functional + non-functional reqs</text>
+  <rect x="1104.448637286709" y="385.0" width="280" height="130" rx="12" ry="12" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.6" filter="url(#soft)"/>
+  <text x="1244.448637286709" y="413.0" class="label-l" text-anchor="middle">2. System Design</text>
+  <text x="1118.448637286709" y="435.0" class="legend-b" text-anchor="start">• Use-case / Sequence / Activity UML</text>
+  <text x="1118.448637286709" y="451.0" class="legend-b" text-anchor="start">• ERD: investigations, sources, seeds</text>
+  <text x="1118.448637286709" y="467.0" class="legend-b" text-anchor="start">• Tech-stack decisions (Flask, SQLite, LangChain, Tor)</text>
+  <rect x="1104.448637286709" y="725.0" width="280" height="130" rx="12" ry="12" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.6" filter="url(#soft)"/>
+  <text x="1244.448637286709" y="753.0" class="label-l" text-anchor="middle">3. Implementation</text>
+  <text x="1118.448637286709" y="775.0" class="legend-b" text-anchor="start">• crawler.py (Tier-1/Tier-2)</text>
+  <text x="1118.448637286709" y="791.0" class="legend-b" text-anchor="start">• search.py + 16 onion engines</text>
+  <text x="1118.448637286709" y="807.0" class="legend-b" text-anchor="start">• LangChain pipeline + 4 preset prompts</text>
+  <text x="1118.448637286709" y="823.0" class="legend-b" text-anchor="start">• Flask API + SPA chat UI</text>
+  <rect x="810.0" y="895.0" width="280" height="130" rx="12" ry="12" fill="#B3E5FC" stroke="#0277BD" stroke-width="1.6" filter="url(#soft)"/>
+  <text x="950.0" y="923.0" class="label-l" text-anchor="middle">4. Integration &amp; Testing</text>
+  <text x="824.0" y="945.0" class="legend-b" text-anchor="start">• End-to-end investigation smoke tests</text>
+  <text x="824.0" y="961.0" class="legend-b" text-anchor="start">• Health checks: Tor, LLM, search engines</text>
+  <text x="824.0" y="977.0" class="legend-b" text-anchor="start">• Tier-fallback validation</text>
+  <text x="824.0" y="993.0" class="legend-b" text-anchor="start">• Re-summarize / Deep-Crawl regression</text>
+  <rect x="515.5513627132908" y="725.0" width="280" height="130" rx="12" ry="12" fill="#FFCDD2" stroke="#C62828" stroke-width="1.6" filter="url(#soft)"/>
+  <text x="655.5513627132908" y="753.0" class="label-l" text-anchor="middle">5. Deployment &amp; Hardening</text>
+  <text x="529.5513627132908" y="775.0" class="legend-b" text-anchor="start">• Dockerfile + embedded Tor daemon</text>
+  <text x="529.5513627132908" y="791.0" class="legend-b" text-anchor="start">• entrypoint.sh — wait Tor bootstrap, pre-warm</text>
+  <text x="529.5513627132908" y="807.0" class="legend-b" text-anchor="start">• PDF/MD export, retry &amp; backoff</text>
+  <text x="529.5513627132908" y="823.0" class="legend-b" text-anchor="start">• Runtime tier reporting</text>
+  <rect x="515.5513627132908" y="385.0" width="280" height="130" rx="12" ry="12" fill="#E1BEE7" stroke="#6A1B9A" stroke-width="1.6" filter="url(#soft)"/>
+  <text x="655.5513627132908" y="413.0" class="label-l" text-anchor="middle">6. Review &amp; Iteration</text>
+  <text x="529.5513627132908" y="435.0" class="legend-b" text-anchor="start">• Supervisor demos &amp; feedback</text>
+  <text x="529.5513627132908" y="451.0" class="legend-b" text-anchor="start">• Mid-evaluation deliverable</text>
+  <text x="529.5513627132908" y="467.0" class="legend-b" text-anchor="start">• Bug fixes, polish, prompt-engineering tweaks</text>
+  <text x="529.5513627132908" y="483.0" class="legend-b" text-anchor="start">• Loop back into Plan for next sprint</text>
+  <path d="M 1076.439708952528 315.5 Q 1116.2243186433545 332.0910346561913, 1118.008928334181 414.5" stroke="#CC2222" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <path d="M 1244.448637286709 521.0 Q 1282.448637286709 620.0, 1244.448637286709 719.0" stroke="#CC2222" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <path d="M 1118.008928334181 825.5 Q 1116.2243186433545 907.9089653438086, 1076.439708952528 924.5" stroke="#CC2222" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <path d="M 823.560291047472 924.5 Q 783.7756813566455 907.9089653438086, 781.9910716658188 825.5" stroke="#CC2222" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <path d="M 655.5513627132908 719.0 Q 617.5513627132908 620.0, 655.5513627132908 521.0" stroke="#CC2222" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <path d="M 781.9910716658188 414.5 Q 783.7756813566455 332.0910346561913, 823.560291047472 315.5" stroke="#CC2222" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <path d="M 890 695 A 60 60 0 1 0 1010 695" stroke="#333333" stroke-width="1.4" fill="none" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+  <text x="950" y="720" class="arrow-lbl" text-anchor="middle">continuous feedback</text>
+  <text x="40" y="1010" class="legend-t">Project Timeline (project-level milestones)</text>
+  <line x1="40" y1="1028" x2="1860" y2="1028" stroke="#9CA3AF" stroke-width="2"/>
+  <circle cx="120" cy="1028" r="7" fill="#CC2222" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="120" y="1060" class="label-sm" text-anchor="middle">Proposal</text>
+  <text x="120" y="1076" class="label-sm" text-anchor="middle">(2024-Oct)</text>
+  <circle cx="380" cy="1028" r="7" fill="#CC2222" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="380" y="1060" class="label-sm" text-anchor="middle">Architecture</text>
+  <text x="380" y="1076" class="label-sm" text-anchor="middle">&amp; UML drafts</text>
+  <circle cx="640" cy="1028" r="7" fill="#CC2222" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="640" y="1060" class="label-sm" text-anchor="middle">Mid-Evaluation</text>
+  <text x="640" y="1076" class="label-sm" text-anchor="middle">(2025-Mid)</text>
+  <circle cx="920" cy="1028" r="7" fill="#CC2222" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="920" y="1060" class="label-sm" text-anchor="middle">Multi-LLM &amp;</text>
+  <text x="920" y="1076" class="label-sm" text-anchor="middle">Frontend SPA</text>
+  <circle cx="1180" cy="1028" r="7" fill="#CC2222" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="1180" y="1060" class="label-sm" text-anchor="middle">Selenium Tier-1</text>
+  <text x="1180" y="1076" class="label-sm" text-anchor="middle">+ Docker</text>
+  <circle cx="1440" cy="1028" r="7" fill="#CC2222" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="1440" y="1060" class="label-sm" text-anchor="middle">Final Eval</text>
+  <text x="1440" y="1076" class="label-sm" text-anchor="middle">(2026)</text>
+  <rect x="40" y="130" width="260" height="128" rx="8" ry="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" filter="url(#soft)"/>
+  <text x="52" y="152" class="legend-t">Notation</text>
+  <rect x="54" y="162" width="20" height="14" rx="3" ry="3" fill="#FBE9E7" stroke="#CC2222" stroke-width="1.2"/>
+  <text x="90" y="173" class="legend-b">Project hub</text>
+  <rect x="54" y="184" width="20" height="14" rx="3" ry="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+  <text x="90" y="195" class="legend-b">SDLC phase</text>
+  <line x1="54" y1="213" x2="80" y2="213" stroke="#CC2222" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="90" y="217" class="legend-b">Phase progression (clockwise)</text>
+  <line x1="54" y1="235" x2="80" y2="235" stroke="#333333" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arrow-open)"/>
+  <text x="90" y="239" class="legend-b">Continuous feedback loop</text>
+  <!-- Footer -->
+  <text x="40" y="1178" class="footer">OBSCURA — Threat Intelligence Automation from Dark Web Sources · NED University of Engineering and Technology · Group CS-22052</text>
+</svg>
